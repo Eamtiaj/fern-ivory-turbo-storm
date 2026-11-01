@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #14110e;
+  --color-bg-raised: #221c17;
+  --color-surface: #2c261f;
+  --color-fg: #f3ead7;
+  --color-muted: #cbbda6;
+  --color-primary: #f25c48;
+  --color-primary-ink: #1a0908;
+  --color-brass: #d4ad62;
+  --color-line: #41382e;
+  --font-display: "Anton", Impact, sans-serif;
+  --font-body: "Newsreader", Georgia, serif;
+  --radius-card: 0.75rem;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    background-color: var(--color-bg);
+    background-image:
+      radial-gradient(ellipse at 50% -20%, color-mix(in srgb, var(--color-brass) 14%, transparent), transparent 52%),
+      radial-gradient(ellipse at 100% 110%, color-mix(in srgb, var(--color-primary) 12%, transparent), transparent 46%);
+    color: var(--color-fg);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+  }
+
+  button {
+    touch-action: manipulation;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brass);
+    outline-offset: 3px;
+  }
+}
+
+.ring-canvas {
+  background: var(--color-surface);
+  border: 2px solid color-mix(in srgb, var(--color-brass) 50%, var(--color-line));
+  box-shadow:
+    inset 0 0 0 7px var(--color-bg),
+    inset 0 0 0 9px color-mix(in srgb, var(--color-brass) 32%, var(--color-line));
+  border-radius: 1rem;
+}
+
+@keyframes wf-tile-in {
+  from {
+    transform: translateY(10px) scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.wf-tile-in {
+  animation: wf-tile-in 220ms ease-out both;
+}
+
+@keyframes wf-float {
+  0% {
+    transform: translate(-50%, 4px) scale(0.86);
+    opacity: 0;
+  }
+  18% {
+    opacity: 1;
+    transform: translate(-50%, -6px) scale(1.06);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -36px) scale(1);
+  }
+}
+
+.wf-float {
+  animation: wf-float 800ms ease-out forwards;
+}
+
+@keyframes wf-flash {
+  0% {
+    opacity: 0.38;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.wf-flash {
+  animation: wf-flash 320ms ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wf-tile-in,
+  .wf-float,
+  .wf-flash {
+    animation: none !important;
+  }
+}

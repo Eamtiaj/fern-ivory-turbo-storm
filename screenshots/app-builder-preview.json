@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Wordfight",
+      "hasCanvas": false,
+      "bodyTextLen": 940,
+      "bodyTextHash": "6e37bbbf115663f41be31a89d94ebe095d2266a38ae249315426dad1eb741e3a",
+      "bodyTextPrefix": "Ten tiles · One rack Shake on Wordfight Spell from a shared rack",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Wordfight",
+      "hasCanvas": false,
+      "bodyTextLen": 916,
+      "bodyTextHash": "4f92416391016a669e79783c1f62a1a020f264dfe33e45709ca26f2c1f09e9c3",
+      "bodyTextPrefix": "Ten tiles · One rack Shake on Wordfight Spell from a shared rack",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
